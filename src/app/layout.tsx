@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <nav>
+        <ul>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/unsplash">Unsplash Photos</Link></li>
+          <li><Link href="/rickandmorty">Rick & Morty Characters</Link></li>
+        </ul>
+      </nav>
       <body className={inter.className}>{children}</body>
     </html>
   );
