@@ -1,6 +1,7 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
-import { fetchUnsplashPhotos } from '../api/unsplash';
+import Image from 'next/image';
+import fetchUnsplashPhotos from '../api/unsplash';
 
 const Unsplash = () => {
   const [photos, setPhotos] = useState([]);
@@ -19,7 +20,13 @@ const Unsplash = () => {
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {photos.map(photo => (
           <div key={photo.id} style={{ margin: '10px' }}>
-            <img src={photo.urls.small} alt={photo.description} style={{ maxWidth: '100%' }} />
+            <Image 
+              src={photo.urls.small} 
+              alt={photo.description} 
+              width={200} 
+              height={200} 
+              style={{ maxWidth: '100%' }} 
+            />
           </div>
         ))}
       </div>

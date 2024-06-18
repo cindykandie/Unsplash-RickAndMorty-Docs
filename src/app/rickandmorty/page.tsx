@@ -1,6 +1,7 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
-import { fetchRickAndMortyCharacters } from './api/rickandmorty';
+import Image from 'next/image';
+import fetchRickAndMortyCharacters from '../api/rickandmorty';
 
 const RickAndMorty = () => {
   const [characters, setCharacters] = useState([]);
@@ -9,7 +10,7 @@ const RickAndMorty = () => {
     const fetchCharacters = async () => {
       const data = await fetchRickAndMortyCharacters();
       setCharacters(data);
-    };
+    }
     fetchCharacters();
   }, []);
 
@@ -19,7 +20,13 @@ const RickAndMorty = () => {
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {characters.map(character => (
           <div key={character.id} style={{ margin: '10px' }}>
-            <img src={character.image} alt={character.name} style={{ maxWidth: '100%' }} />
+            <Image 
+              src={character.image} 
+              alt={character.name} 
+              width={200} 
+              height={200} 
+              style={{ maxWidth: '100%' }} 
+            />
             <p>{character.name}</p>
           </div>
         ))}
