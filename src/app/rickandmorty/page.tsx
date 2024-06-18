@@ -10,7 +10,7 @@ const RickAndMorty = () => {
     const fetchCharacters = async () => {
       const data = await fetchRickAndMortyCharacters();
       setCharacters(data);
-    }
+    };
     fetchCharacters();
   }, []);
 
