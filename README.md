@@ -51,6 +51,12 @@ This project documents the Unsplash and Rick & Morty APIs. It demonstrates how t
 - Navigate to `/unsplash` to view Unsplash photos
 - Navigate to `/rickandmorty` to view Rick & Morty characters
 
+
+## Presentations
+- [Business Presentation](https://github.com/cindykandie/Unsplash-RickAndMorty-Docs/blob/main/public/presentations/Leveraging%20Unsplash%20API%20for%20Business%20Success.pdf)
+- [Developer Presentation](https://github.com/cindykandie/Unsplash-RickAndMorty-Docs/blob/main/public/presentations/Getting%20Started%20with%20Unsplash%20API%20for%20%20Developers.pdf)
+
+
 ## Project Structure
 
 ```
