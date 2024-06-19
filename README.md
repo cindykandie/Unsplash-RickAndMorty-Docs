@@ -17,6 +17,10 @@ This project documents the Unsplash and Rick & Morty APIs. It demonstrates how t
 - Axios (for REST APIs)
 - Vercel (for deployment)
 
+## Screenshots
+![Unsplash Photos](/public/unsplashed.png)
+![Ricky and Morty Characters](/public/rickied.png)
+
 ## Setup
 
 1. Clone the repository
