@@ -15,11 +15,13 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
       <body>
+        {/* Conditionally render ApolloProvider if in a browser environment */}
         {isBrowser ? (
           <ApolloProvider client={client}>
             {children}
           </ApolloProvider>
         ) : (
+          // Render children directly if not in a browser environment
           children
         )}
       </body>
