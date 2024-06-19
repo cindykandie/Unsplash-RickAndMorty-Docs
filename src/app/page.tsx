@@ -1,9 +1,10 @@
-import NavBar from "./components/NavBar";
+import NavBar from './components/NavBar';
 import Link from 'next/link';
 import Image from 'next/image';
 
 // Component for the Home page
 const Home = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navigation bar */}
@@ -234,6 +235,4 @@ fetch('https://rickandmortyapi.com/api/character/1')
       </footer>
     </div>
   );
-};
-
-export default Home;
+}
