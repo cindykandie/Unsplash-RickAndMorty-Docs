@@ -4,15 +4,23 @@ import Image from 'next/image';
 import fetchUnsplashPhotos from '../api/unsplash';
 import NavBar from '../components/NavBar';
 
+type Photo = {
+  id: string;
+  urls: {
+    small: string;
+  };
+  description: string;
+};
+
 const Unsplash = () => {
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState<Photo[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPhotos = async () => {
       setLoading(true);
-      const data = await fetchUnsplashPhotos(searchTerm);
+      const data: Photo[] = await fetchUnsplashPhotos(searchTerm);
       setPhotos(data);
       setLoading(false);
     };
@@ -43,7 +51,7 @@ const Unsplash = () => {
               <div key={photo.id} className="bg-white p-4 rounded shadow-lg">
                 <Image 
                   src={photo.urls.small} 
-                  alt={photo.description} 
+                  alt={photo.description || 'Untitled'} 
                   width={200} 
                   height={200} 
                   className="w-full h-auto rounded"
