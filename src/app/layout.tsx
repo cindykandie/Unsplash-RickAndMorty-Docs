@@ -1,9 +1,14 @@
 'use client';
+import { ReactNode } from 'react';
 import { ApolloProvider } from '@apollo/client';
 import client from './lib/apolloClient';
 import './globals.css';
 
-const RootLayout = ({ children }) => {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+const RootLayout = ({ children }: RootLayoutProps) => {
   // Check if we're in a browser environment
   const isBrowser = typeof window !== 'undefined';
 

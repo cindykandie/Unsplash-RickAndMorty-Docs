@@ -4,8 +4,15 @@ import Image from 'next/image';
 import fetchRickAndMortyCharacters from '../api/rickandmorty';
 import NavBar from '../components/NavBar';
 
+type Character = {
+  id: number;
+  name: string;
+  status: string;
+  image: string;
+};
+
 const RickAndMorty = () => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState<Character[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [loading, setLoading] = useState(true);
@@ -13,7 +20,7 @@ const RickAndMorty = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       setLoading(true);
-      const data = await fetchRickAndMortyCharacters();
+      const data: Character[] = await fetchRickAndMortyCharacters();
       setCharacters(data);
       setLoading(false);
     };
