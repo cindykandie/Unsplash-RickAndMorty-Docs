@@ -1,15 +1,19 @@
 import NavBar from '../components/NavBar';
 
+// Component for displaying Unsplash API documentation
 const UnsplashDocs = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <NavBar />
       <div className="p-8">
+        {/* Page title */}
         <h1 className="text-3xl font-bold mb-8 text-center">Unsplash API Documentation</h1>
         <div className="bg-white p-6 rounded shadow-lg">
+          {/* Overview section */}
           <h2 className="text-2xl font-bold mb-4">Overview</h2>
           <p>The Unsplash API allows you to access high-quality photos from Unsplash.</p>
 
+          {/* Endpoints section */}
           <h2 className="text-2xl font-bold mt-8 mb-4">Endpoints</h2>
           <p>Here are some of the key endpoints:</p>
           <ul className="list-disc ml-6">
@@ -24,7 +28,10 @@ const UnsplashDocs = () => {
             </li>
           </ul>
 
+          {/* Usage examples section */}
           <h2 className="text-2xl font-bold mt-8 mb-4">Usage Examples</h2>
+          
+          {/* Example: Fetch Photos */}
           <h3 className="text-xl font-bold mt-4">Fetch Photos</h3>
           <pre className="bg-gray-200 p-4 rounded shadow-md">
             {`
@@ -39,6 +46,7 @@ fetch('https://api.unsplash.com/photos', {
             `}
           </pre>
 
+          {/* Example: Search Photos */}
           <h3 className="text-xl font-bold mt-4">Search Photos</h3>
           <pre className="bg-gray-200 p-4 rounded shadow-md">
             {`

@@ -2,10 +2,14 @@ import NavBar from "./components/NavBar";
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Component for the Home page
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
+      {/* Navigation bar */}
       <NavBar />
+      
+      {/* Header section */}
       <header className="bg-green-500 text-white py-8">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl font-bold">Welcome to API Documentation</h1>
@@ -15,8 +19,11 @@ const Home = () => {
         </div>
       </header>
 
+      {/* Main content section */}
       <main className="container mx-auto py-12 px-4">
-      <section id="presentations" className="mb-12">
+        
+        {/* Presentations section */}
+        <section id="presentations" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Presentations</h2>
           <div className="flex space-x-8 justify-center">
             <div className="text-center">
@@ -51,6 +58,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Introduction section */}
         <section id="introduction" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Introduction</h2>
           <p>
@@ -61,8 +70,11 @@ const Home = () => {
           </p>
         </section>
 
+        {/* API Documentation section */}
         <section id="api-documentation" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">API Documentation</h2>
+          
+          {/* Unsplash API section */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Unsplash API</h3>
             <p>
@@ -88,6 +100,7 @@ const Home = () => {
             </ul>
           </div>
 
+          {/* Rick & Morty API section */}
           <div className="bg-white p-6 rounded shadow-lg mt-8">
             <h3 className="text-2xl font-bold mb-4">Rick & Morty API</h3>
             <p>
@@ -113,8 +126,11 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Example Use Cases section */}
         <section id="use-cases" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Example Use Cases</h2>
+          
+          {/* Unsplash API Use Cases section */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-2xl font-bold mb-4">Unsplash API Use Cases</h3>
             <ul className="list-disc ml-6">
@@ -124,6 +140,7 @@ const Home = () => {
             </ul>
           </div>
 
+          {/* Rick & Morty API Use Cases section */}
           <div className="bg-white p-6 rounded shadow-lg mt-8">
             <h3 className="text-2xl font-bold mb-4">
               Rick & Morty API Use Cases
@@ -136,8 +153,11 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Code Samples section */}
         <section id="code-samples" className="mb-12">
           <h2 className="text-3xl font-bold mb-4">Code Samples</h2>
+          
+          {/* Example: Fetching Photos from Unsplash */}
           <div className="bg-white p-6 rounded shadow-lg">
             <h3 className="text-2xl font-bold mb-4">
               Fetching Photos from Unsplash
@@ -157,6 +177,7 @@ fetchPhotos();
               `}
             </pre>
 
+            {/* Example: Searching Photos on Unsplash */}
             <h3 className="text-2xl font-bold mt-8 mb-4">
               Searching Photos on Unsplash
             </h3>
@@ -175,6 +196,7 @@ searchPhotos('nature');
               `}
             </pre>
 
+            {/* Example: Fetching Characters from Rick & Morty API */}
             <h3 className="text-2xl font-bold mt-8 mb-4">
               Fetching Characters from Rick & Morty API
             </h3>
@@ -187,6 +209,7 @@ fetch('https://rickandmortyapi.com/api/character')
               `}
             </pre>
 
+            {/* Example: Fetching a Character by ID */}
             <h3 className="text-2xl font-bold mt-8 mb-4">
               Fetching a Character by ID
             </h3>
@@ -203,6 +226,7 @@ fetch('https://rickandmortyapi.com/api/character/1')
        
       </main>
 
+      {/* Footer section */}
       <footer className="bg-gray-800 text-white py-4">
         <div className="container mx-auto text-center">
           <p>&copy; 2024 Cindy Kandie. All rights reserved.</p>

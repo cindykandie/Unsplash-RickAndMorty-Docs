@@ -4,6 +4,7 @@ import Image from 'next/image';
 import fetchUnsplashPhotos from '../api/unsplash';
 import NavBar from '../components/NavBar';
 
+// Define a type for the photo data
 type Photo = {
   id: string;
   urls: {
@@ -12,11 +13,16 @@ type Photo = {
   description: string;
 };
 
+// Component for displaying Unsplash photos
 const Unsplash = () => {
+  // State for storing photos data
   const [photos, setPhotos] = useState<Photo[]>([]);
+  // State for search term
   const [searchTerm, setSearchTerm] = useState('');
+  // State for loading indicator
   const [loading, setLoading] = useState(true);
 
+  // Fetch photos when the component mounts or searchTerm changes
   useEffect(() => {
     const fetchPhotos = async () => {
       setLoading(true);
@@ -33,6 +39,7 @@ const Unsplash = () => {
       <div className="p-8">
         <h1 className="text-3xl font-bold mb-8 text-center">Unsplash Photos</h1>
         <div className="mb-8 flex justify-center">
+          {/* Input for searching photos */}
           <input
             type="text"
             placeholder="Search photos"
@@ -42,10 +49,12 @@ const Unsplash = () => {
           />
         </div>
         {loading ? (
+          // Show loading spinner while fetching data
           <div className="flex justify-center items-center">
             <div className="loader border-t-4 border-green-500 rounded-full w-16 h-16"></div>
           </div>
         ) : (
+          // Display fetched photos
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {photos.map(photo => (
               <div key={photo.id} className="bg-white p-4 rounded shadow-lg">
