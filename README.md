@@ -5,6 +5,8 @@ This project documents the Unsplash and Rick & Morty APIs. It demonstrates how t
 ## Features
 - Fetch and display photos from Unsplash
 - Fetch and display characters from Rick & Morty
+- Search and filter Rick and Morty characters by name
+- Search photos from Unsplash API
 - User-friendly interface with search and filter functionality
 - Responsive design
 
